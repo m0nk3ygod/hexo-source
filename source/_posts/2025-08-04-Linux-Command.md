@@ -7,8 +7,6 @@ tags: [basic, linux, command, study]
 
 # Linux Command
 
-(내가 볼려고 정리해 둠)
-
 리눅스 명령어
 - CLI를 통한 다양한 리눅스 쉘 명령어
 - 해킹 공부에 가장 기초적이며 필수적인 기술
