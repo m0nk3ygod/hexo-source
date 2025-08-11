@@ -1,5 +1,5 @@
 ---
-title: "🔒 (B) Path Finder Write-up"
+title: "🔒 (B) Path Finder"
 date: 2025-08-01 00:00:00 +0900
 categories: [Dreamhack, Wargame]
 tags: [dreamhack, wargame, beginner, path, system hacking, linux, c]
