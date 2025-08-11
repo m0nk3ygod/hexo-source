@@ -63,5 +63,6 @@ base64로 인코딩 된 값임을 유추할 수 있다.
 바로 플래그를 얻을 수 있었다.
 
 <br>
+
 flag : ~~picoCTF{c00k1e_m0nster_l0ves_c00kies_96F58DAB}~~
 

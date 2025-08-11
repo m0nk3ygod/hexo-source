@@ -127,4 +127,5 @@ head 태그 내부에 있는 link 태그 부분이다.
 두 플래그를 이어붙여서 완성된 플래그를 얻을 수 있다!
 
 <br>
+
 flag : ~~picoCTF{1nclu51v17y_1of2_f7w_2of2_b8f4b022}~~

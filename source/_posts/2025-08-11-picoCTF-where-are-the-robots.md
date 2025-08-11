@@ -65,6 +65,7 @@ Description을 보면 로봇이라는 말이 나온다.
 해당 파일을 확인해보니, 플래그를 얻을 수 있었다.
 
 <br>
+
 flag : ~~picoCTF{ca1cu1at1ng_Mach1n3s_1bb4c}~~
 
 

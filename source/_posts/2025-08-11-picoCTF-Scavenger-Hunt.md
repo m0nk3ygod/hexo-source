@@ -168,6 +168,7 @@ Finder (Windows의 익스플로러 같은 앱) 가 해당 폴더의 **아이콘 
 이것들을 전부 조합하면 플래그를 얻을 수 있다.
 
 <br>
+
 flag : ~~picoCTF{th4ts_4_l0t_0f_pl4c3s_2_lO0k_f7ce8828}~~
 
 

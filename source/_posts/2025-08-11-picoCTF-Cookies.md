@@ -175,6 +175,7 @@ Payload type을 보면 `Simple list` 로 설정되어 있을텐데,
 플래그를 찾을 수 있었다.
 
 <br>
+
 flag : ~~picoCTF{3v3ry1_l0v3s_c00k135_bb3b3535}~~
 
 

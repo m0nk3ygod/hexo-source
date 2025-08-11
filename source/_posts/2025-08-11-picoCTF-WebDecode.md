@@ -97,6 +97,7 @@ section 태그의 notify_true 라는 속성을 보니
 이렇게 플래그를 얻을 수 있었다.
 
 <br>
+
 flag : ~~picoCTF{web_succ3ssfully_d3c0ded_02cdcb59}~~
 
 
