@@ -333,3 +333,40 @@ tags:
 | `hexo d` 또는 `hexo deploy` | 블로그 배포 (`_config.yml`의 deploy 설정 필요) |
 | `hexo clean && hexo g && hexo s` | 캐시 삭제 → 정적 파일 생성 → 로컬 서버 실행 (연속 실행) |
 | `hexo clean && hexo g && hexo d` | 캐시 삭제 → 정적 파일 생성 → 배포 (연속 실행) |
+
+# 7. 캐시 강재 새로고침 설정
+
+themes/vivia/layout/_partial/head.ejs 내부 헤드태그 안에 다음 을 삽입
+
+```html
+<script>
+  (function () {
+    // 1) 템플릿에서 주입되는 빌드 ID (Hexo 빌드 시각)
+    window.__BUILD_ID__ = <%= +new Date(site.time || Date.now()) %>;
+    const KEY = 'last_build_id';
+    const last = Number(localStorage.getItem(KEY) || 0);
+    const now  = Number(window.__BUILD_ID__ || Date.now());
+    if (!last || last !== now) {
+      // 2) 서비스워커/Cache Storage 비우기 (원점의 캐시만)
+      Promise.resolve().then(async () => {
+        if ('serviceWorker' in navigator) {
+          const regs = await navigator.serviceWorker.getRegistrations();
+          for (const r of regs) await r.unregister();
+        }
+        if ('caches' in window) {
+          const keys = await caches.keys();
+          await Promise.all(keys.map(k => caches.delete(k)));
+        }
+      }).then(() => {
+        // 3) HTTP 캐시는 못 지우므로, 쿼리 파라미터로 강제 새 요청
+        const url = new URL(location.href);
+        url.searchParams.set('_r', String(now));
+        localStorage.setItem(KEY, String(now));
+        location.replace(url.toString()); // 1회만 새로고침
+      }).catch(() => {
+        localStorage.setItem(KEY, String(now));
+      });
+    }
+  })();
+  </script>
+```
