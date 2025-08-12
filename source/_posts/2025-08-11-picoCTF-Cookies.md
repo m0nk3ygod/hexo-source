@@ -17,7 +17,7 @@ tags: [picoctf, cookies, web hacking, write-up]
 ![cookies figure1](/assets/img/picoCTF/2025-08-06-11-27-59.png)
 
 > [Description]  
-> 누가 쿠키를 안 좋아하겠어요?
+> 누가 쿠키를 안 좋아하겠어요?  
 > 가장 맛있는(?) 쿠키를 찾아보세요
 
 보아하니 먹는 쿠키는 아닌거 같고,  
@@ -62,17 +62,20 @@ tags: [picoctf, cookies, web hacking, write-up]
 해당 문구와 함께 "snickerdoodle" 이었던게 "chocolate chip" 으로 바뀌었다.
 
 <br>
+
 2도 넣어봤다.
 
 ![cookies figure6](/assets/img/picoCTF/2025-08-06-11-51-20.png)
 
 <br>
+
 이것을 통해 알 수 있는 점은,
 
 - 쿠키 이름을 적으면 "I love \[cookie name\] cookies!" 가 출력된다.
 - 쿠키 별로 값이 다르다. (고유 쿠키값을 가진다)
 
 <br>
+
 지금까지 확인된 쿠키  
 
 snickerdoodle - 0  
@@ -80,6 +83,7 @@ chocolate chip - 1
 oatmeal raisin - 2  
 
 <br>
+
 이제 숫자를 1씩 증가시켜보며 특별한 쿠키를 찾으면 된다!!!
 
 ...
@@ -105,6 +109,7 @@ oatmeal raisin - 2
 서버에 요청할 때 `Cookie: name=0` 형태로 쿠키를 설정해 요청을 보내고 있음을 확인할 수 있었다.
 
 <br>
+
 이제 `0`을 1씩 증가시켜보면서 특별한 쿠키를 찾아보자.
 
 `BurpSuite - Proxy - HTTP history` 탭에서 `Request` 영역을 우클릭하고,  
@@ -119,6 +124,7 @@ oatmeal raisin - 2
 Target과 요청 양식이 그대로 받아져온 것을 확인할 수 있다.
 
 <br>
+
 ### 사용법
 
 우선 바꿀 바라미터 값을 드래그해서 **블록** 처리 해준다.
@@ -134,6 +140,7 @@ Target과 요청 양식이 그대로 받아져온 것을 확인할 수 있다.
 이것은 자동화 대상의 파라미터로 지정했음을 의미한다.
 
 <br>
+
 이제 우측 `Payloads` 탭을 보자.
 
 Payload type을 보면 `Simple list` 로 설정되어 있을텐데,  
@@ -158,6 +165,7 @@ Payload type을 보면 `Simple list` 로 설정되어 있을텐데,
 사진과 같이 설정한 Payload 대로 파라미터를 수정하며 요청을 보내기 시작한다.
 
 <br>
+
 공격 결과들을 쭉 보고 있는데
 
 ![cookies figure18](/assets/img/picoCTF/2025-08-06-14-00-29.png)

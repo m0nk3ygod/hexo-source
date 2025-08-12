@@ -31,6 +31,7 @@ tags: [picoctf, logon, web hacking, write-up]
 우측 상단에는 `Home`과 `Sign Out` 링크도 보인다.
 
 <br>
+
 일단 "Joe"에 이름으로 로그인하라고 했으니 로그인 해보았다.
 
 비밀번호는 모르겠어서 그냥 joe라고 입력했는데...
@@ -54,6 +55,7 @@ tags: [picoctf, logon, web hacking, write-up]
 권한과 관련있어보이니, 쿠키 쪽을 살펴보기로 했다.
 
 <br>
+
 `Application` 탭으로 이동해 쿠키를 봤는데,
 
 ![logon figure5](/assets/img/picoCTF/2025-08-08-00-02-55.png)
@@ -67,6 +69,7 @@ tags: [picoctf, logon, web hacking, write-up]
 이 녀석이 뭔가 admin의 권한 자격을 확인하고 있는 듯 했고,  
 
 <br>
+
 값을 `True`로 변경하고 새로고침 해보니
 
 ![logon figure7](/assets/img/picoCTF/2025-08-08-00-05-44.png)

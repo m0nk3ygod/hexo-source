@@ -22,6 +22,7 @@ tags: [picoctf, WebDecode, web hacking, write-up]
 Description 을 읽어보면 "Web Inspector"의 사용법을 아냐고 물어보고 있다.
 
 <br>
+
 ### Web Inspector
 
 웹 검사 도구란, 웹사이트의 구조와 동작을 분석하거나 수정해볼 수 있는 도구로,  
@@ -30,6 +31,7 @@ Description 을 읽어보면 "Web Inspector"의 사용법을 아냐고 물어보
 개발자 도구를 여는 단축키는 F12 이다.
 
 <br>
+
 이제 문제에 접속해보자!
 
 ![webdecode figure2](/assets/img/picoCTF/2025-08-06-09-59-19.png)
@@ -37,6 +39,7 @@ Description 을 읽어보면 "Web Inspector"의 사용법을 아냐고 물어보
 접속해보면 약간 정신없어보이는(?) 페이지를 볼 수 있다.
 
 <br>
+
 해당 페이지는 총 3개의 페이지로 이동할 수 있었는데,  
 
 `HOME`, `ABOUT`, `CONTACT`  
@@ -56,6 +59,7 @@ Description 을 읽어보면 "Web Inspector"의 사용법을 아냐고 물어보
 일단 도움이 되는 정보는 없는 것 같다. (응원 메세지만 가득하다.)
 
 <br>
+
 그렇다면 이제 웹 검사 도구를 한번 써보자.
 
 F12를 눌러 개발자 도구를 열어준다.  
@@ -72,6 +76,7 @@ F12를 눌러 개발자 도구를 열어준다.
 딱히 얻을만한 정보는 없었다...
 
 <br>
+
 다음으로 `ABOUT` 페이지를 조사해봤는데,
 
 ![webdecode figure7](/assets/img/picoCTF/2025-08-06-10-22-53.png)

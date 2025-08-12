@@ -33,6 +33,7 @@ Description을 보면 로봇이라는 말이 나온다.
 (https://developers.google.com/search/docs/crawling-indexing/robots/create-robots-txt?hl=ko)
 
 <br>
+
 우선 문제에 접속해봤다.
 
 ![water figure2](/assets/img/picoCTF/2025-08-08-00-33-06.png)
@@ -56,6 +57,7 @@ Description을 보면 로봇이라는 말이 나온다.
 `/1bb4c.html` 파일이 크롤링 되지 않도록 Disallow 되어있는 것을 볼 수 있다.
 
 <br>
+
 크롤링만 되지 않을 뿐, 접근은 가능할 수 있으니 해당 경로를 주소창에 입력해봤다.
 
 `https://jupiter.challenges.picoctf.org/problem/56830/1bb4c.html`

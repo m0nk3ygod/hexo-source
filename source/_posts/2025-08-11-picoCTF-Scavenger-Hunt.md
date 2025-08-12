@@ -35,6 +35,7 @@ Description 만 읽어봤을 때는 사이트 내부에 플래그가 숨겨져 �
 이런게 출력된다.
 
 <br>
+
 이것말고는 딱히 다른 기능은 없어보이니 바로 개발자도구를 켜서 정보들을 얻어보자.  
 (개발자 도구 - F12 or 페이지 빈 곳 우클릭 - 검사)
 
@@ -51,6 +52,7 @@ Description 만 읽어봤을 때는 사이트 내부에 플래그가 숨겨져 �
 이걸 전부 찾아 조합하면 되는 것 같다.
 
 <br>
+
 그래서 숨겨져있는 곳이 어디일까 생각하며 HTML 구조를 쭉 봤는데,
 
 ![sh figure6](/assets/img/picoCTF/2025-08-07-17-10-42.png)
@@ -60,6 +62,7 @@ Description 만 읽어봤을 때는 사이트 내부에 플래그가 숨겨져 �
 주소창에 해당 파일들을 입력해 접근해봤다.
 
 <br>
+
 먼저 `mycss.css`부터 확인해 봤다.
 
 `http://mercury.picoctf.net:39491/mycss.css`
@@ -73,6 +76,7 @@ Description 만 읽어봤을 때는 사이트 내부에 플래그가 숨겨져 �
 이렇게 2번째 플래그 조각을 찾을 수 있었다.
 
 <br>
+
 그래서 바로 `myjs.js` 파일도 확인해봤다.
 
 `http://mercury.picoctf.net:39491/myjs.js`
@@ -89,16 +93,21 @@ Description 만 읽어봤을 때는 사이트 내부에 플래그가 숨겨져 �
 
 라는 주석이 있었다.
 
+<br>
+
 ### robots.txt
 
-`robots.txt` 파일이란, 웹사이트의 루트 디렉토리에 위치하는 **텍스트 파일**로,  
-검색 엔진의 **웹 크롤러(로봇)**에게 해당 사이트의 어떤 페이지를 크롤링(수집)할 수 있고,  
+`robots.txt` 파일이란, 웹사이트의 루트 디렉토리에 위치하는 **텍스트 파일**로,
+
+검색 엔진의 **웹 크롤러(로봇)**에게 해당 사이트의 어떤 페이지를 크롤링(수집)할 수 있고, 
+
 어떤 페이지는 수집하지 말아야 하는지 지시하는 역할을 한다.
 
 자세한 내용은 공식 문서 참고  
 (https://developers.google.com/search/docs/crawling-indexing/robots/create-robots-txt?hl=ko)
 
 <br>
+
 해당 주석을 통해 `robots.txt` 파일이 존재한다는 힌트를 얻었고,  
 
 바로 `robots.txt` 파일에 접근해봤다.
@@ -117,6 +126,8 @@ Description 만 읽어봤을 때는 사이트 내부에 플래그가 숨겨져 �
 
 아마 아파치 웹 서버에서만 사용되는 파일에 있다는 말인 것 같고,  
 접근이라는 말을 들었을 때 `.htaccess` 파일이 생각났다.
+
+<br>
 
 ### .htaccess
 .htaccess (Hypertext Access) 는 **Apache 웹 서버**에서 디렉터리 단위로 접근 제어 설정을 할 수 있도록 해주는 파일이다.
@@ -137,6 +148,7 @@ Description 만 읽어봤을 때는 사이트 내부에 플래그가 숨겨져 �
 4번째 플래그 조각도 찾을 수 있었다.
 
 <br>
+
 내부에 또 주석이 보이는데,
 
 ![sh figure12](/assets/img/picoCTF/2025-08-07-19-25-12.png)
@@ -149,6 +161,8 @@ Description 만 읽어봤을 때는 사이트 내부에 플래그가 숨겨져 �
 
 이것들을 조합하면 `.DS_Store` 라는 파일을 떠올릴 수 있다.
 
+<br>
+
 ### .DS_Store
 .DS_Store (Desktop Services Store) 는 macOS에서 디렉터리를 열면 자동으로 생성되는 숨김 파일이다.
 
@@ -157,6 +171,7 @@ Finder (Windows의 익스플로러 같은 앱) 가 해당 폴더의 **아이콘 
 웹 사이트를 작업할 때, 맥 사용자가 이 파일을 실수로 서버에 업로드 하는 경우가 종종 있다.
 
 <br>
+
 그래서 이 파일도 접근해보면,
 
 `http://mercury.picoctf.net:39491/.DS_Store`
