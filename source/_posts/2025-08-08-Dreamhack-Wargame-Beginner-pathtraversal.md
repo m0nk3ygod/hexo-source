@@ -4,7 +4,7 @@ date: 2025-08-08 00:00:00 +0900
 categories: [Dreamhack, Wargame]
 tags: [dreamhack, wargame, beginner, pathtraversal, ssrf]
 published: true
-password: "ahdkeyrkt12#"
+password: "tjwjddltoddlf"
 abstract: "해당글은 비밀글 입니다."
 message: "비밀번호를 입력하세요."
 ---
