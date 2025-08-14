@@ -1,7 +1,7 @@
 ---
 title: "🔒 Computer Architecture (Dreamhack)"
 date: 2025-08-13
-categories: [Dreamhack, Basic]
+categories: ["< Dreamhack >", Study, "- Basic"]
 tags: [dreamhack, basic, computer architecture, isa, register, segment, flag, pointer]
 password: "tjwjddltoddlf"
 abstract: "이 글은 보호되어있습니다."

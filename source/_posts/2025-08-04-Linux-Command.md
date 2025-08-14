@@ -1,7 +1,7 @@
 ---
 title: "Basic Linux Command"
 date: 2025-08-04 00:00:00 +0900
-categories: [Tech, Linux]
+categories: ["< Tech >", Linux]
 tags: [basic, linux, command, study]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "(Easy) Includes"
 date: 2025-08-11 00:00:00 +0900
-categories: [picoCTF, Web Exploitation]
+categories: ["< picoCTF >" , Web Exploitation]
 tags: [picoctf, includes, web hacking, write-up]
 ---
 

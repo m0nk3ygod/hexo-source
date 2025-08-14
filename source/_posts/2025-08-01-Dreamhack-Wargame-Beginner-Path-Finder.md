@@ -1,7 +1,7 @@
 ---
 title: "🔒 (B) Path Finder"
 date: 2025-08-01 00:00:00 +0900
-categories: [Dreamhack, Wargame]
+categories: ["< Dreamhack >", Wargame, "- Pwnable"]
 tags: [dreamhack, wargame, beginner, path, system hacking, linux, c]
 published: true
 password: "tjwjddltoddlf"

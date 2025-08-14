@@ -1,7 +1,7 @@
 ---
 title: "🔒 (B) pathtraversal"
 date: 2025-08-08 00:00:00 +0900
-categories: [Dreamhack, Wargame]
+categories: ["< Dreamhack >", Wargame, "- Web"]
 tags: [dreamhack, wargame, beginner, pathtraversal, ssrf]
 published: true
 password: "tjwjddltoddlf"

@@ -1,7 +1,7 @@
 ---
-title: blog settings
+title: "🔒 blog settings"
 date: 2025-07-07
-categories: [settings]
+categories: ["< settings >", Hexo]
 tags: []
 password: "hexo settings"
 abstract: "이 글은 비밀번호가 필요합니다."
