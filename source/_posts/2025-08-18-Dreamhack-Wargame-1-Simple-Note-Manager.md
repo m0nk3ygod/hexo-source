@@ -232,7 +232,7 @@ subprocess.Popen(f'cp ./tmp/notes.tmp /tmp/{timestamp}', shell=True)
 
 <br>
 
-### Request Bin (Dreamahck's tool)
+### Request Bin (Dreamhack's tool)
 
 ![snm figure4](/assets/img/dreamhack/2025-08-18-16-19-16.png)
 
