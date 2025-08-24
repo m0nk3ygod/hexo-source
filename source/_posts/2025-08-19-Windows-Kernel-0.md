@@ -1,6 +1,6 @@
 ---
 title: "🪟 Windows Kernel - 1"
-date: 2025-08-19
+date: 2025-08-24
 categories: ["< Tech >", Windows, "- Kernel"]
 tags: [windows, kernel, usermode, kernelmode]
 password: "tjwjddltoddlf"

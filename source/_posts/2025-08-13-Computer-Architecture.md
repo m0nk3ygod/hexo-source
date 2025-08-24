@@ -368,3 +368,10 @@ al은 하위 8비트를 의미한다.
 
 ![dreamhack cs figure3](/assets/img/dreamhack/2025-08-13-17-13-52.png)
 (출처 : Dreamhack - "Background: Computer Architecture 레지스터 호환 강의 중")
+
+Computer Architecture 끝
+
+<br>
+
+## Refer
+- https://dreamhack.io/ (Computer Architecture)
