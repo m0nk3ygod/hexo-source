@@ -119,7 +119,7 @@ PE 구조를 가진 파일을 **PE 파일** 이라고 부르며,
 
 ## PE 파일 구조
 
-**PE 파일** 은 크게 **PE 헤더** 와 **PE 바디** 로 구분할 수 있다.
+**PE 구조** 은 크게 **PE 헤더** 와 **PE 바디** 로 구분할 수 있다.
 
 ![PE 파일 구조](/assets/img/dreamhack/2025-08-22-16-26-02.png)
 
@@ -368,7 +368,13 @@ typedef struct _IMAGE_OPTIONAL_HEADER {
 - DataDirectory[IMAGE_NUMBEROF_DIRECTORY_ENTRIES]
     - `IMAGE_NUMBEROF_DIRECTORY_ENTRIES` 는 PE 파일에서 사용되는 데이터 디렉터리 항목의 최대 개수를 나타내는 상수이며, Windows에서는 이 상수가 [16](https://github.com/jasonwhite/ducible/blob/adc6cacdc2405a217f9ea2178b6ec3e2cdc6200c/src/pe/format.h#L158C1-L158C44)으로 정의되어 있다.
     - 본 **DataDirectory** 배열의 각 요소는 다음과 같이 `struct IMAGE_DATA_DIRECTORY` 구조체로 정의되어 있으며, 각각 가상 주소(`VirtualAddress`)와 크기(`Size`)를 포함한다.
-    - 배열 내부의 각 인덱스의 역할은 구조체로 정의되어 있으며 각 `DataDirectory` 배열은 인덱스에 따라 서로 다른 용도로 사용된다. 예를 들어, 0번째 인덱스인 `DataDirectory[0]` 은 Export Table로, 1번째인 `DataDirectory[1]` 은 Import Table로 사용된다. 이처럼 각 인덱스마다 용도가 정해져 있으며, 보다 다양한 용도는 [define](https://github.com/jasonwhite/ducible/blob/adc6cacdc2405a217f9ea2178b6ec3e2cdc6200c/src/pe/format.h#L279)에 설명되어 있다.
+    ```c++
+    typedef struct _IMAGE_DATA_DIRECTORY {
+        uint32_t VirtualAddress;
+        uint32_t Size;
+    } IMAGE_DATA_DIRECTORY, *PIMAGE_DATA_DIRECTORY;
+    ```
+    - 각 `DataDirectory` 배열은 인덱스에 따라 서로 다른 용도로 사용된다. 예를 들어, 0번째 인덱스인 `DataDirectory[0]` 은 Export Table로, 1번째인 `DataDirectory[1]` 은 Import Table로 사용된다. 이처럼 각 인덱스마다 용도가 정해져 있으며, 보다 다양한 용도는 [define](https://github.com/jasonwhite/ducible/blob/adc6cacdc2405a217f9ea2178b6ec3e2cdc6200c/src/pe/format.h#L279)에 설명되어 있다.
 
 <br>
 
